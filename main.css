@@ -37,6 +37,10 @@ body {
     gap: 30px;
     height: 100vh;
     transition: background 0.2 linear;
+    --bg: var(--yellow);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
 
 }
 
@@ -52,13 +56,6 @@ body {
     height: 80px;
     padding: 10px;
     margin-bottom: 50px;
-}
-
-.body {
-    --bg: var(--yellow);
-    --fontColor: var(--black);
-    --btnBg: var(--black);
-    --btnFontColor: var(--white);
 }
 
 .dark-theme {
