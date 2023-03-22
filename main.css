@@ -5,80 +5,96 @@
     padding: 0;
     margin: 0;
     border: 0;
+    box-sizing: border-box;
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
 :root {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
     --yellow: #ebeda1;
     --white: #ffffff;
     --black: #000000;
-}    
+}
 
 
 body {
+    min-height: 100%;
+    position: absolute;
+    width: 100%;
+    background: var(--bg);
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    height: 100vh;
+    transition: background 0.2 linear;
+
+}
+
+.button {
     background: var(--bg);
     font-family: monospace;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    transition: background 0.2 linear;
-   
-    }
+    align-self: center;
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 50px;
+}
 
-    .button {
-       
-        background: var(--bg);
-        font-family: monospace;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-self: center;
-    }
+.body {
+    --bg: var(--yellow);
+    --fontColor: var(--black);
+    --btnBg: var(--black);
+    --btnFontColor: var(--white);
+}
 
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --btnBg: var(--yellow);
+    --btnFontColor: var(--black);
+}
+
+.btn {
+  background: none;
+    cursor: pointer;
+    top: 20px;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
     
-    ul {
-    font-family: helvética;
-    }
+   
+}
 
-    li {
-    list-style: circle;
-        }
-        
-     .list {
-        list-style: square;
-        }
-        
-     #msg {
-        font-family: monospace; 
-        font-style: italic;
-        font-weight: 900;
-        }
+.btn:focus {
+    outline-style: none;
+}
 
-        .light-theme {
-            --bg: var(--yellow);
-            --fontColor: var(--black);
-            --btnBg: var(--black);
-            --btnFontColor: var(--white);
-        }
+.imagem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+}
 
-        .dark-theme {
-            --bg: var(--black);
-            --fontColor: var(--green);
-            --btnBg: var(--yellow);
-            --btnFontColor: var(--black);
-        }
+.icone {
+    height: 50px;
+    width: 50px;
+    transform: rotate(180deg);
+}
 
-        .btn {
-           color : var(--btnFontColor);
-           background: var(--btnBg);
-           cursor: pointer;
-           top: 20px;
-           height: 50px;
-           width: 50px;
-           border-radius: 50%;
-           border: none;
-           box-shadow:4px 0px 40px whitesmoke;
-        }
-
-        .btn:focus { outline-style: none;}
