@@ -5,11 +5,11 @@ const icone = document.querySelector('.icone')
 btnTheme.addEventListener('click', function() {
     document.body.classList.toggle('dark-theme')
 
-    if( icone.src.includes('light.svg') ) {
-      icone.src = 'dark.svg';
+    if( icone.src.includes('light00.svg') ) {
+      icone.src = 'dark00.svg';
       
     }else {
-      icone.src = 'light.svg';
+      icone.src = 'light00.svg';
     }
     
 });
